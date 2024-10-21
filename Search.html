@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search </title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Search Page</title>
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                  results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        window.onload = function() {
+            const telephoneNum = getParameterByName('telephoneNum');
+            if (telephoneNum) {
+                document.getElementById("SearchFeild").value = telephoneNum;
+            }
+        }
+    </script>
+
+</head>
+<body id="seacrhbody">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="HeadingPlaceOrder">Search Order</h1>
+         </div>
+         <div class="input-container">
+           
+            <input type="text" id="SearchFeild" >
+            <input type="button" value="Search" id="SearchBtn" onclick="getDetailsCustomer()">
+
+        </div>
+        <div class="input-container">
+       
+            <label id="NameSearch" for="Itemcd">Name:</label>
+         <input type="text" id="NameSearchField" readonly>
+        </div>
+        <h1 id="OrderDetailSearch">Order Details</h1>
+        <table id="CustomerDetails" border="2">
+            <tr>
+                <th>Order ID</th>
+                <th>Order Qty</th>
+                <th>Total</th>
+                <th> Date</th>
+            </tr>
+        </table>
+        <div>
+            <label id="SubTot" for="SubTotTxt">Sub Tot:</label>
+            <input id="SubTotTxt" type="text" >
+        </div>
+      <div>
+      <input id="GetBillBtn" type="button" value="Bill" onclick="SetBill()">
+      <input id="BackBtnSerach" type="button" value="Back" onclick="location.href='page2.html'"  >
+      </div>
+        
+      <div id="toastBoxSearch">
+
+      </div>
+       
+        <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+        <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+        <script src="app.js"></script>
+      <script src="Bill.js"></script>
+</body>
+</html>

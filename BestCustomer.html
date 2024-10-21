@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Customer</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    #congratulations {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#congratulations.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+#GetReportHeading {
+
+   background-color:  #FF69B4; /* Hot pink color for the text */
+    border: 2px solid; /* Pink border */
+    padding: 40px 300px; /* Adds space between text and border */
+    border-radius: 40px; /* Rounds the corners of the border */
+    display: inline-block; /* Ensures the border wraps tightly around the text */
+}
+
+.back-button {
+            background-color: #FF69B4; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #FF4C8D; /* Slightly darker pink on hover */
+        }
+
+        .back-button i {
+            font-size: 18px; /* Icon size */
+        }
+
+  </style>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body id="BestCustBody">
+    <div id="BestCustHeading" class="heading-container" >
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="GetReportHeading">Best Customer</h1>
+    </div>
+   <div id="BestCst">
+    <div>
+       <label id="NameBestCustomer" for="Itemcd">Name:</label>
+    <input  id="BestCustomerTxt" type="text">
+       </div>
+       <div>
+        <label id="TelephoneNumberBest" for="TelephoneNumberTxt">Telephone Number:</label>
+        <input  id="TelephoneNumberTxt" type="text">
+           </div>
+           <div>
+            <label id="Amount" for="AmountTxt">Amount:</label>
+            <input  id="AmountTxt" type="text">
+               </div>  
+<div>
+    <canvas id="confetti"></canvas>
+    <button id="buttonBestCust"  onclick="FindBestCustomer()" >CLICK🎉</button>
+   
+    <div id="congratulations" class="hidden">Congratulations! 🎉</div>
+    <button class="back-button" onclick="location.href='ReportsUI.html'" >
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+</div>
+    <!-- <input id="BestCustBtn" type="button" value="Find Best Customer" onclick="FindBestCustomer()"> -->
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+ const button=document.querySelector('#buttonBestCust');
+const canvas=document.querySelector('confetti')
+const jsConfetti = new JSConfetti()
+const congratulations = document.querySelector('#congratulations');
+
+button.addEventListener('click',()=>{
+    jsConfetti.addConfetti({
+   emojis: ['🤟', '😍', '🌹', '✨', '🥳', '👏','💖'],
+})
+congratulations.classList.remove('hidden');
+    setTimeout(() => {
+        congratulations.classList.add('visible');
+    }, 100);
+    setTimeout(() => {
+        congratulations.classList.remove('visible');
+        setTimeout(() => {
+            congratulations.classList.add('hidden');
+        }, 500); // Delay to allow the fade-out transition
+    }, 5000); // Adjust this time to control how long the message stays visible
+
+}
+
+)
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

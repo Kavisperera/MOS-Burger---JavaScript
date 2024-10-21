@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve and parse customerInfo from localStorage
+            let customerInfo = JSON.parse(localStorage.getItem('customerInfo'));
+            
+            if (customerInfo) {
+                document.getElementById("name").value = customerInfo.customerName || '';
+                document.getElementById("TeleNum").value = customerInfo.telephone || '';
+            }
+        });
+    </script>
+    
+    <script>
+         function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                  results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Function to set the input fields with the URL parameters
+        window.onload = function() {
+            document.getElementById("OIDText").value = OIDCounter;
+            const itemCode = getParameterByName('itemCode');
+            const price = getParameterByName('price');
+            const discount = getParameterByName('discount');
+
+            if (itemCode) {
+                document.getElementById("ItemCodeText").value = itemCode;
+            }
+            if (price) {
+                document.getElementById("PriceText").value = price;
+                FinalPrice = parseFloat(price);
+            }
+            if (discount) {
+                document.getElementById("DiscountText").value = discount;
+                DiscountPrs = parseFloat(discount);
+            }
+        }
+    </script>
+</head>
+<body id="PlaceOrderBody">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="HeadingPlaceOrder">Place Order</h1>
+    </div>
+
+    <div  class="input-container">
+        <label id="OrderId" for="OIDText">Order ID:</label>
+        <input type="text" id="OIDText" readonly >
+    </div>
+    <div class="input-container">
+        <label id="Name" for="name">Customer Name:</label>
+        <input type="text" id="name" placeholder="Enter customer name...">
+    </div>
+    <div class="input-container">
+        <label id="TelephoneNumber" for="TeleNum">Telephone Number:</label>
+        <input type="text" id="TeleNum" placeholder="Enter Telephone Number...">
+        <input id="btnOrder" type="button" value="Add To Cart" onclick="Calc()">
+    </div>
+    <hr>
+    <div class="input-container">
+        <label id="ItemCode" for="ItemCodeText">Item Code:</label>
+        <input type="text" id="ItemCodeText">
+      <input id="billBtn" type="button" value="Place Order" onclick="getBill()">
+    </div>
+    <div class="input-container">
+        <label id="Price" for="PriceText">Price:</label>
+        <input type="text" id="PriceText">
+        <input id="Backbtn" type="button" value="Back To Home Page" onclick="location.href='OrderUI.html'" >
+    </div>
+    <div class="input-container">
+        <label id="Discount" for="DiscountText">Discount:</label>
+        <input type="text" id="DiscountText" >
+        <label for="DiscountText">%</label>
+    </div>
+    <div class="input-container">
+        <label id="QTY" for="QTYText">Qty:</label>
+        <input type="text" id="QTYText">
+    </div>
+    <div class="input-container">
+        <label id="Total" for="TotalFeild">Total:</label>
+        <input type="text" id="TotalFeild">
+    </div>
+    
+
+    <button onclick="resetOIDCounter()">Reset Order ID Counter</button>
+    <div id="toastBoxOrder">
+
+    </div>
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="Bill.js"></script>
+    
+    
+</body>
+</html>

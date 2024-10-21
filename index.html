@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body id="indexbody">
+    <!-- Add this inside your <div class="form-container"> -->
+
+
+    <div class="watermark-container">
+        <!-- <img id="imgHead" src="img/My Logo.jpg" alt="Logo"> -->
+        <h1 id="Heading_HomePage">✨ JK Burgers 🍔</h1>
+    </div>
+    <div class="image-container">
+        <img src="img/hero-background.jpg" alt="Background Image">
+        <div class="form-container">
+            <div class="button-container">
+                <input type="radio" id="cashier" name="role" value="cashier" class="role-radio" checked>
+                <label for="cashier" class="role-label">
+                   <img src="img/cashier.png" alt="">
+                   <p>Cashier</p> 
+                </label>
+                <input type="radio" id="admin" name="role" value="admin" class="role-radio">
+                <label for="admin" class="role-label">
+                    <img src="img/admin.png" alt="">
+                    <p>Admin</p>
+                </label>
+            </div>
+            <h2>Login</h2>
+            <input id="Username" type="text" placeholder="Username">
+            <input id="Password" type="password" placeholder="Password">
+            <button class="navigate-button" onclick="storeData(event)">
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </button>
+            <p id="role-message" style="color: blue;"></p>
+            <p id="error-message" style="color: red; display: none;">Incorrect username or password</p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2061 @@
+/* Hide the radio buttons */
+.role-radio {
+    display: none;
+}
+
+/* Style the labels to look like buttons */
+.role-label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 3px;
+    cursor: pointer;
+    border: 1px solid #999; /* Updated border color for subtle contrast */
+    border-radius: 5px;
+    background-color: #ececec; /* Light gray background */
+    color: #333; /* Darker text color for readability */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
+}
+
+.role-label i {
+    margin-right: 5px;
+}
+
+/* Change appearance when the radio button is checked */
+.role-radio:checked + .role-label {
+    background-color: #FFD700; /* Bright yellow for active selection */
+    color: #333; /* Darker text on yellow */
+}
+
+.role-label:hover {
+    border: 3px solid #aaa; /* Slightly darker hover border */
+}
+
+/* Base Home Styling */
+.home {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #101820; /* Darker background */
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1C2B36; /* Dark blue-green background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+.image-container img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFDEAD; /* Lighter neutral background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Form Heading */
+.form-container h2 {
+    margin: 10px 0 5px;
+    color: #333; /* Darker text */
+}
+
+/* Input Fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 5px;
+    background-color: #f7f7f7; /* Light background for inputs */
+    transition: border-color 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #FF6347; /* Focus color - tomato red */
+}
+
+/* Navigate Button */
+.navigate-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF6347; /* Button color - tomato red */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navigate-button i {
+    margin-right: 5px;
+}
+
+.navigate-button:hover {
+    background-color: #FF4500; /* Darker red for hover */
+}
+
+.navigate-button:active {
+    background-color: #E63946; /* Active button color - deep red */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role-label {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .role-label:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Additional hover effect for button */
+.navigate-button:hover {
+    background-color: #3b1304; /* Changed hover color */
+}
+
+#Heading_HomePage {
+    text-align: center;
+    color: #2E4053; /* Changed heading text color to a dark slate */
+}
+
+#btnPlaceOrder {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #3498DB; /* Changed background color to a blue shade */
+    color: #FFFFFF; /* Changed text color to white */
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s, background-color 0.3s; /* Added transition for smooth effects */
+}
+
+#btnPlaceOrder:hover {
+    background-color: #2980B9; /* Darker blue on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnPlaceOrder:focus {
+    outline: none;
+}
+
+#btnPlaceOrder:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#FirstPageBtn {
+    position: absolute;
+    top: 89%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    background-color: #E74C3C; /* Changed background color to red */
+    color: #FFFFFF; /* Changed text color to white */
+    border: none;
+    padding: 15px 90px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#FirstPageBtn:hover {
+    background-color: #C0392B; /* Darker red on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#FirstPageBtn:focus {
+    outline: none;
+}
+
+#FirstPageBtn:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+.image-container2 {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: auto;
+}
+
+#btnSearch {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #1ABC9C; /* Changed background color to teal */
+    color: #FFFFFF; /* Changed text color to white */
+    border: none;
+    padding: 15px 160px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btnSearch:hover {
+    background-color: #16A085; /* Darker teal on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnSearch:focus {
+    outline: none;
+}
+
+#btnSearch:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#btnView {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #F39C12; /* Changed background color to orange */
+    color: #FFFFFF; /* Changed text color to white */
+    border: none;
+    padding: 15px 170px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#btnView:hover {
+    background-color: #E67E22; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnView:focus {
+    outline: none;
+}
+
+#btnView:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#HeaderPage2 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    z-index: 1;
+    color: white;
+}
+
+#btnUpdateOrder {
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #ff7b00; /* Changed background color */
+    color: #222; /* Changed text color */
+    border: none;
+    padding: 15px 80px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnUpdateOrder:hover {
+    background-color:#FFA500; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnUpdateOrder:focus {
+    outline: none;
+}
+
+#btnAddCashier:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+.image-container3 img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#PlaceOrder {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #222; /* Changed text color */
+    z-index: 1;
+}
+
+#Admin {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: normal;
+    color: #222; /* Changed text color */
+    z-index: 1;
+}
+
+#Cashier {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: normal;
+    color: #222; /* Changed text color */
+    z-index: 1;
+}
+#clock {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.order-id-container {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.order-id-container h2 {
+    margin-right: 10px;
+}
+
+.order-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Customer-id-container {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Customer-id-container h2 {
+    margin-right: 10px;
+}
+
+.Customer-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Number-id-container {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Number-id-container h2 {
+    margin-right: 10px;
+}
+
+.Number-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Item-id-container {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Item-id-container h2 {
+    margin-right: 10px;
+}
+
+.Item-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Price-id-container {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Price-id-container h2 {
+    margin-right: 10px;
+}
+
+.Price-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Discount-id-container {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Discount-id-container h2 {
+    margin-right: 10px;
+}
+
+.Discount-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Qty-id-container {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Qty-id-container h2 {
+    margin-right: 10px;
+}
+
+.Qty-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+.Total-id-container {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #FFD700; /* Changed to gold */
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Total-id-container h2 {
+    margin-right: 10px;
+}
+
+.Total-id-container input {
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Changed to white */
+}
+
+#logo {
+    width: 10%;
+}
+
+.card-square {
+    width: 150px;
+    height: 150px;
+}
+
+.card-img-top {
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-title, .card-text {
+    font-size: 14px;
+    color: #FF6347; /* Changed to tomato */
+}
+
+.card-title, .card-text-Price {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-sm {
+    font-size: 12px;
+}
+
+.Buybutton {
+    background-color: #32CD32; /* Changed to lime green */
+    color: white; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.Buybutton:hover {
+    background-color: #FF4500; /* Changed hover color to orange red */
+}
+
+#HeadingPlaceOrder {
+    font-family: 'Alfa Slab One', cursive; /* Ensure proper font family */
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #FF0000; /* Changed to red */
+    padding: 40px 300px; /* Adjust padding to make the border longer */
+    border-radius: 40px;
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Corrected comment */
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the entire container's content */
+    margin: 20px;
+}
+
+.heading-image {
+    height: 100px; /* Adjust the size of the image */
+    width: auto;
+    margin-right: 10px;
+    background-color: #fff;
+}
+#OrderID {
+    margin-top: 10%;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+#custName1 {
+    font-weight: 700;
+}
+
+#Name {
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 3%;
+}
+
+#name {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+    color: white;
+}
+
+#nameUpdate {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+    color: white;
+}
+
+#TelephoneNumber {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#TeleNumUpdate {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+    color: white;
+}
+
+#TeleNum {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+    color: white;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+#ItemCode {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#ItemCodeText {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#ItemCodeTextUpdate {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#Price {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#PriceText {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#PriceTextUpdate {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#DiscountTextUpdate {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#QTYTextUpdate {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#Discount {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#DiscountText {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#QTY {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#QTYText {
+    color: white;
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #FFABAB; /* Light coral */
+}
+
+#TotalFeildUpdate {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #D9D9D9; /* Light gray */
+    font-weight: bold;
+    color: black;
+}
+
+#Total {
+    color: #FF5733; /* Dark orange */
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 40%;
+}
+
+#TotalFeild {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #D9D9D9; /* Light gray */
+    font-weight: bold;
+    color: black;
+}
+
+#btnOrder {
+    margin-left: 110px;
+    padding: 20px 70px;
+    border-radius: 40px;
+    background-color: #6EBB6E; /* Soft green */
+    color: white;
+    font-size: larger;
+    font-family: Alfa Slab One;
+}
+
+#btnOrder:hover {
+    background-color: #FF6347; /* Coral on hover */
+}
+
+#btnUpdate {
+    margin-left: 150px;
+    padding: 20px 50px;
+    border-radius: 40px;
+    background-color: #6EBB6E; /* Soft green */
+    color: white;
+    font-size: larger;
+    font-family: Alfa Slab One;
+}
+
+#btnUpdate:hover {
+    background-color: #FF6347; /* Coral on hover */
+}
+
+#Backbtn {
+    font-family: Alfa Slab One;
+    margin-left: 250px;
+    padding: 20px 45px;
+    border-radius: 40px;
+    background-color: #1a0202; /* Bright red */
+    color: white;
+    font-size: larger;
+}
+
+#Backbtn:hover {
+    background-color: #8d0707; /* Soft green on hover */
+}
+
+#SearchFeild {
+    padding: 15px 100px;
+    border-radius: 40px;
+    background-color: #D9D9D9; /* Light gray */
+    font-weight: bold;
+    color: black;
+    margin-left: 30%;
+}
+
+#SearchBtn {
+    font-family: Inknut Antiqua;
+    margin-left: 2%;
+    font-size: large;
+    padding: 15px 50px;
+    border-radius: 40px;
+    background-color: #6EBB6E; /* Soft green */
+}
+
+#SearchBtn:hover {
+    background-color: #FF6347; /* Coral on hover */
+}
+
+#NameSearch {
+    font-weight: 900;
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+#OrderDetailSearch {
+    text-align: center;
+    background-color: #D91E1E; /* Bright red */
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 40px;
+    color: white;
+}
+
+#NameSearchField {
+    border: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+#CustomerDetails {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetails th,
+#CustomerDetails td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetails th {
+    background-color: #009879; /* Teal */
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetails tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Light gray */
+}
+
+#CustomerDetails tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+#CustomerDetails th,
+#CustomerDetails td {
+    text-align: center;
+}
+
+#BackBtnSerach {
+    font-family: Inknut Antiqua;
+    font-size: large;
+    margin-left: 80%;
+    margin-top: 3%;
+    padding: 10px 50px;
+    background-color: #6EBB6E; /* Soft green */
+}
+
+#BackBtnSerach:hover {
+    background-color: #FF6347; /* Coral on hover */
+}
+
+#priceSample {
+    width: 100px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.edit-button {
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    background-color: #003333; /* Blue color for Edit button */
+}
+
+button.edit-button:hover {
+    background-color: #33FFCC; /* Light cyan on hover */
+}
+
+button.buy-button {
+    background-color: #6EBB6E; /* Soft green */
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+button.buy-button:hover {
+    background-color: #FF6347; /* Coral on hover */
+}
+
+#BurgerMenu {
+    text-align: center;
+    background-color: #D9D9D9; /* Light gray */
+}
+
+button.delete-button {
+    background-color: #FF6347; /* Coral */
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.plus-button {
+    margin-top: 5%;
+    margin-left: 80%;
+    padding: 10px 20px;
+    background-color: #FF6347; /* Coral */
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+}
+
+.plus-button:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+.btn-add {
+    margin-left: 80%;
+    padding: 10px 20px;
+    background-color: #FF6347; /* Coral */
+    border: none;
+    border-radius: 40px;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+.tr-heading {
+    background-color: #6EBB6E; /* Soft green */
+    color: white;
+}
+
+.tr-total {
+    background-color: #FFABAB; /* Light coral */
+    font-weight: bold;
+}
+#HeadingUpdateOrder {
+    font-family: 'Alfa Slab One';
+    font-size: x-large;
+    text-align: center;
+    background-color: #FF4F00; /* Bright orange */
+    color: white;
+    padding: 20px;
+}
+
+#btnAddCashier {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 30%; /* adjust as needed */
+    left: 20%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #FFB347; /* Light orange color */
+    color: #333; /* Dark text color for better readability on light orange */
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnAddCashier:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnAddCashier:focus {
+    outline: none;
+}
+
+#btnAddCashier:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#btnBackTo {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 90%; /* adjust as needed */
+    left: 20%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #ffb347; /* Light orange color */
+    color: #333; /* Dark text color for better readability on light orange */
+    border: none;
+    padding: 15px 90px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;  
+}
+
+#btnBackTo:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnBackTo:focus {
+    outline: none;
+}
+
+#btnBackTo:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#btnCashierSearch {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 45%;  /* adjust as needed */
+    left: 20%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #FFB347; /* Light orange color */
+    color: #333;
+    border: none;
+    padding: 15px 120px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnCashierSearch:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnCashierSearch:focus {
+    outline: none;
+}
+
+#btnCashierSearch:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#btnViewOrders {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 60%;  /* adjust as needed */
+    left: 20%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #FFB347; /* Light orange color */
+    color: #333;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnViewOrders:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnViewOrders:focus {
+    outline: none;
+}
+
+#btnViewOrders:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#btnFindReport {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 75%;  /* adjust as needed */
+    left: 20%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #FFB347; /* Light orange color */
+    color: #333;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnFindReport:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly scale up on hover */
+}
+
+#btnFindReport:focus {
+    outline: none;
+}
+
+#btnFindReport:active {
+    transform: translate(-50%, -50%) scale(0.98); /* Slightly scale down on click */
+}
+
+#ViewOrder {
+    font-family: 'Alfa Slab One';
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #FF4F00; /* Bright orange */
+    padding: 40px 300px; /* Adjust padding to make the border longer */
+    border-radius: 40px;
+    margin: 0; /* Remove default margin */
+    display: inline-block; 
+}
+
+#CustomerDetailsView {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsView th, #CustomerDetailsView td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsView th {
+    background-color: #009879; /* Green for header */
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsView tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsView th, #CustomerDetailsView td {
+    text-align: center;
+}
+
+#GetReportHeading {
+    font-family: 'Alfa Slab One';
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #FF4F00; /* Bright orange */
+    padding: 40px 300px; /* Adjust padding to make the border longer */
+    border-radius: 40px;
+    margin: 0; /* Remove default margin */
+    display: inline-block; 
+}
+
+#btnMonthlyReport {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 40%; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #7B7272; /* Neutral gray */
+    color: white;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnMonthlyReport:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+#CustomerDetailsReport {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsReport th, #CustomerDetailsReport td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsReport th {
+    background-color: #009879; /* Green for header */
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsReport tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsReport th, #CustomerDetailsReport td {
+    text-align: center;
+}
+
+#btnBestCustomer {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 55%; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #7B7272; /* Neutral gray */
+    color: white;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnBestCustomer:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+#btnHomeCashier {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 85%; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #7B7272; /* Neutral gray */
+    color: white;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnHomeCashier:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+#CustomerDetailsBest {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsBest th, #CustomerDetailsBest td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsBest th {
+    background-color: #009879; /* Green for header */
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsBest tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsBest th, #CustomerDetailsBest td {
+    text-align: center;
+}
+
+#btnBestCustomerReport {
+    position: absolute; /* or relative, depending on your layout needs */
+    top: 75%; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: #7B7272; /* Neutral gray */
+    color: white;
+    border: none;
+    padding: 15px 130px; /* adjust padding as needed */
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnBestCustomerReport:hover {
+    background-color: #D9D9D9; /* Light gray on hover */
+}
+
+#CustomerDetailsBestReport {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsBestReport th, #CustomerDetailsBestReport td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsBestReport th {
+    background-color: #009879; /* Green for header */
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsBestReport tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsBestReport th, #CustomerDetailsBestReport td {
+    text-align: center;
+}
+/* Button Styles */
+#btnAddCashier {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB347; /* Light orange color */
+    color: #333; /* Dark text color for better readability on light orange */
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnAddCashier:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnAddCashier:focus {
+    outline: none;
+}
+
+#btnAddCashier:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#btnBackTo {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB347;
+    color: #333;
+    border: none;
+    padding: 15px 90px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;  
+}
+
+#btnBackTo:hover {
+    background-color: #FF8C00;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnBackTo:focus {
+    outline: none;
+}
+
+#btnBackTo:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#btnCashierSearch {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB347;
+    color: #333;
+    border: none;
+    padding: 15px 120px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnCashierSearch:hover {
+    background-color: #FF8C00;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnCashierSearch:focus {
+    outline: none;
+}
+
+#btnCashierSearch:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#btnViewOrders {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB347;
+    color: #333;
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnViewOrders:hover {
+    background-color: #FF8C00;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnViewOrders:focus {
+    outline: none;
+}
+
+#btnViewOrders:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#btnFindReport {
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB347;
+    color: #333;
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnFindReport:hover {
+    background-color: #FF8C00;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#btnFindReport:focus {
+    outline: none;
+}
+
+#btnFindReport:active {
+    transform: translate(-50%, -50%) scale(0.98);
+}
+
+#ViewOrder {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #F60C0C;
+    padding: 40px 300px;
+    border-radius: 40px;
+    margin: 0; 
+    display: inline-block; 
+}
+
+#CustomerDetailsView {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsView th, #CustomerDetailsView td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsView th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsView tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsView th, #CustomerDetailsView td {
+    text-align: center;
+}
+
+#GetReportHeading {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    background-color: #F60C0C;
+    padding: 40px 300px;
+    border-radius: 40px;
+    margin: 0; 
+    display: inline-block; 
+}
+
+#btnMonthlyReport {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7B7272;
+    color: white;
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+#btnMonthlyReport:hover {
+    background-color: #D9D9D9;
+}
+
+#CustomerDetailsReport {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#CustomerDetailsReport th, #CustomerDetailsReport td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#CustomerDetailsReport th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#CustomerDetailsReport tr:hover {
+    background-color: #f1f1f1;
+}
+
+#CustomerDetailsReport th, #CustomerDetailsReport td {
+    text-align: center;
+}
+
+#btnBestCustomer {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7B7272;
+    color: white;
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnBestCustomer:hover {
+    background-color: #D9D9D9;
+}
+
+#btnHomeCashier {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7B7272;
+    color: white;
+    border: none;
+    padding: 15px 100px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.Menu {
+    margin-top: 10px;
+    text-align: center;
+    background-color: gray;
+}
+
+#btnItemsReport {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7B7272;
+    color: white;
+    border: none;
+    padding: 15px 130px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnItemsReport:hover {
+    background-color: #D9D9D9;
+}
+
+/* Container Styles */
+#AddCashierBody {
+    background-color: #ffffff; /* Set background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 
+      0 10px 15px rgba(0, 0, 0, 0.3), 
+      0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 140px; /* Add padding inside the box */
+    margin: 20px; /* Margin around the box */
+}
+
+#BestCustBody {
+    background: linear-gradient(45deg, #FFC0CB, #FFB6C1, #FF69B4, #FF1493); 
+}
+
+#BestCst { 
+    background-color: #ffffff; /* Set background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 
+      0 10px 15px rgba(0, 0, 0, 0.3), 
+      0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 70px; /* Add padding inside the box */
+    margin: 20px; /* Margin around the box */
+}
+
+/* Text Styles */
+#BestCustomerTxt,
+#TelephoneNumberTxt,
+#AmountTxt {
+    padding: 5px 30px;
+    font-size: larger;
+    font-weight: 800;
+    border-radius: 40px;
+    background-color: #FFEBEE; /* Soft pink */
+}
+
+#NameBestCustomer,
+#TelephoneNumberBest,
+#Amount {
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 30%;
+    color: rgba(255, 105, 180, 0.8); /* Light pink */
+}
+
+/* Button Styles */
+#buttonBestCust {
+    background: linear-gradient(45deg, #ff6b81, #ff8a8a);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+#buttonBestCust:hover {
+    background: linear-gradient(45deg, #ff8a8a, #ff6b81);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#buttonBestCust:active {
+    transform: scale(0.98);
+}
+
+/* Search UI Styles */
+#SearchCashierTxt {
+    padding: 10px 50px;
+    margin-left: 30%;
+    border-radius: 40px;
+}
+
+#SearchCashierBtn {
+    padding: 10px 20px;
+    font-size: large;
+    border-radius: 40px;
+    background-color: #3EF510; /* Bright green */
+}
+
+#SearchCashierBtn:hover {
+    background-color: #c40b0b; /* Dark red */
+}
+
+/* Toast Notification Styles */
+#toastBox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toast {
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    font-weight: 700;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toast img {
+    margin: 0 20px;
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green; /* Green for success */
+    animation: anim 5s linear forwards;
+}
+
+.toast.Cashier::after,
+.toast.Check::after {
+    background: red; /* Red for error */
+}
+
+/* Animation Keyframes */
+@keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
+
+/* General Styles for UI Sections */
+#OrderUIbody,
+#MonthlyReportBody,
+#PlaceOrderBody,
+#ViewOrdersBody {
+    background: linear-gradient(to bottom, #e0e0e0, #ffffff); 
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Additional Button Styles */
+#billBtn {
+    margin-left: 200px;
+    padding: 20px 75px;
+    border-radius: 40px;
+    background-color: #42E907; /* Bright green */
+    color: white;
+    font-size: larger;
+    font-family: 'Alfa Slab One';
+}
+
+#billBtn:hover {
+    background-color: #F60C0C; /* Dark red */
+}
+
+/* Heading Styles */
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.heading-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}  
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Back Button Styles */
+.back-button {
+    position: fixed;
+    left: 20px;
+    background-color: #FF6B6B; /* Light red */
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+#CashierBack {
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: large;
+    background-color: #FF5C5C; /* Darker red */
+}
+
+.back-button:hover {
+    background-color: #FFCCCC; /* Soft pink */
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #FFCCCC; /* Soft pink */
+    transform: scale(0.95);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Background Styles */
+#seacrhbody {
+    background: linear-gradient(to bottom, #F0F0F0, #FFFFFF); /* Light grey to white */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Base Styles for Subtotal */
+#SubTot {
+    font-size: x-large;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#SubTotTxt {
+    font-size: x-large;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effect */
+div:hover #SubTot {
+    color: #D00C0C; /* Dark red */
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+div:hover #SubTotTxt {
+    background-color: #e7f0ff; /* Light blue background on hover */
+    border-color: #007BFF; /* Change border color */
+}
+
+/* Get Bill Button Styles */
+#GetBillBtn {
+    padding: 10px 50px;
+    margin-top: 1px;
+    background-color: #3EF510; /* Bright green */
+    font-size: large;
+    border-radius: 40px;
+}
+
+#GetBillBtn:hover {
+    background-color: #D00C0C; /* Dark red */
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff; /* White background */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Close Button */
+.close-button {
+    color: #FF0000; /* Bright red */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000000; /* Black */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Alert Message */
+#alertMessage {
+    font-size: x-large;
+    color: black;
+}
+
+/* Background Styles */
+#indexbody {
+    background: linear-gradient(to right, #FFD700, #FF6347); /* Gold to tomato */
+}
+
+#AddCashody {
+    background-color: #FFCC99; /* Light peach */
+}  
+

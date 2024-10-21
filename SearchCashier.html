@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body id="SerchCashierBody" >
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="HeadingPlaceOrder">Search Cashier</h1>
+         </div>
+
+    <div  >
+        <button class="back-button fade-in" onclick="location.href='Admin.html'">Back</button>
+        <input id="SearchCashierTxt" type="text">
+        <input id="SearchCashierBtn" type="button" value="Search" onclick="searchCashier()">
+
+    </div>
+    <div id="SearchCashierInter">
+    <div class="input-container">
+        <label id="CashierName" for="name">Cashier Name:</label>
+        <input type="text" id="CashierNameSearchTxt" >
+    </div>
+    <div class="input-container">
+        <label id="CashierPasswordSearch" for="name">Cashier Password:</label>
+        <input type="text" id="CashierPasswordSearchTxt" >
+    </div>
+   <input id="UpdateCashier" type="button" value="Update" onclick="updateCashier()">
+   <input id="DeleteCashier" type="button" value="Delete" onclick=" deleteCashier()">
+</div>
+<div id="customAlert" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeAlert()">&times;</span>
+        <p id="alertMessage"></p>
+    </div>
+</div>
+
+<div id="SearchCashierBox">
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>

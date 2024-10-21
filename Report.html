@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    .button {
+    margin-bottom: 5px;
+    margin-left: 40%;
+    background: linear-gradient(45deg, #FFA500, #FF6347); /* Gradient from orange to tomato */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #FF6347, #FFA500); /* Gradient reversed on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+</style>
+
+</head>
+
+<body id="MonthlyReportBody">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="GetReportHeading">Get Reports</h1>
+    </div>
+
+    <div>
+        <table id="CustomerDetailsReport" border="2">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Order Quantity</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="TbodyReport">
+                <!-- Rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <input type="button" class="button" value="Get Report" onclick="generateReport()">
+    <button class="back-button fade-in" onclick="location.href='ReportsUI.html'">Back</button>
+
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+    <script src="report.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Order</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body id="UpdateOrderDetails">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="HeadingUpdateOrder">Update Order Details</h1>
+            </div>
+            <div class="input-container">
+           
+                <input type="text" id="SearchFeild" >
+                <input type="button" value="Search" id="SearchBtn" onclick="UpdateDisplayDetails()">
+    
+            </div>
+
+            <div class="input-container">
+                <label id="OrderId" for="OIDText">Order ID:</label>
+                <input type="text" id="OIDTextUpdate" readonly >
+            </div>
+            <div class="input-container">
+                <label id="Name" for="name">Customer Name:</label>
+                <input type="text" id="nameUpdate" >
+            </div>
+            <div class="input-container">
+                <label id="TelephoneNumber" for="TeleNum">Telephone Number:</label>
+                <input type="text" id="TeleNumUpdate" >
+                <input id="btnUpdate" type="button" value="Update Order" onclick="setUpdate()">
+            </div>
+            <hr>
+            <div class="input-container">
+                <label id="ItemCode" for="ItemCodeText">Item Code:</label>
+                <input type="text" id="ItemCodeTextUpdate" readonly>
+                <input id="Backbtn" type="button" value="Previous Page" onclick="location.href='page2.html'">
+            </div>
+            <div class="input-container">
+                <label id="Price" for="PriceText">Price:</label>
+                <input type="text" id="PriceTextUpdate" readonly>
+            </div>
+            <div class="input-container">
+                <label id="Discount" for="DiscountText">Discount:</label>
+                <input type="text" id="DiscountTextUpdate" readonly >
+                <label for="DiscountText">%</label>
+            </div>
+            <div class="input-container">
+                <label id="QTY" for="QTYText">Qty:</label>
+                <input type="text" id="QTYTextUpdate" readonly>
+            </div>
+            <div class="input-container">
+                <label id="Total" for="TotalFeild">Total:</label>
+                <input type="text" id="TotalFeildUpdate" readonly>
+            </div>
+            <div id="customAlert" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeAlert()">&times;</span>
+                    <p id="alertMessage"></p>
+                </div>
+            </div>
+            <div id="toastBoxSearch">
+
+            </div>
+
+            <script src="app.js"></script>
+
+</body>
+</html>

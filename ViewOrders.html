@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  
+  input[type="button"] {
+    background: linear-gradient(45deg, #FFA500, #FF6347); /* Gradient from orange to tomato */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start with hidden button */
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(45deg, #FF6347, #FFA500); /* Gradient reversed on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+input[type="button"]:focus {
+    outline: none;
+}
+
+input[type="button"]:active {
+    transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  
+  
+</style>
+</head>
+<body id="ViewOrdersBody">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="ViewOrder">View Orders</h1>
+         </div>
+         <div>
+         <table id="CustomerDetailsView" border="2">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Order Quantity</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="TbodyView">
+              
+                <!-- Rows will be inserted here -->
+            </tbody>
+        </div>
+            <input type="button" value="Back" onclick="location.href='ReportsUI.html'">
+
+        <script src="app.js"></script>
+</body>
+</html>

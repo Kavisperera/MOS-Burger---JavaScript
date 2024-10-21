@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cashier</title>
+    <link rel="icon" href="img/logo.(1).PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/189c9d1885.js" crossorigin="anonymous"></script>
+
+</head>
+<body id="AddCashody">
+    <div class="heading-container">
+        <img src="img/logo.(1).PNG" alt="Logo" class="heading-image">
+        <h1 id="HeadingPlaceOrder">Add Cashier</h1>
+         </div>
+         
+         <div id="AddCashierBody">
+            
+    <div class="input-container">
+        
+        <label id="CashierNameUpdate" for="name">Cashier Name :</label>
+        <input type="text" id="CashierNameTxt" >
+    </div>
+    <div class="input-container">
+        <label id="CashierPassword" for="name">Cashier Password:</label>
+        <input type="text" id="CashierPasswordTxt" >
+    </div>
+    <input id="AddBtn" type="button" value="Add" onclick="addCashier()"> 
+    <input id="CashierBack" type="button" value="Back" onclick="location.href='Admin.html'">
+</div>
+<!-- <div id="successToast" class="toast">
+    Cashier Added Successfully!
+    <button class="close-button">&times;</button>
+</div> -->
+<div id="toastBox">
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
